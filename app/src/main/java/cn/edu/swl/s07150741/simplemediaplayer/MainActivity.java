@@ -42,7 +42,9 @@ public class MainActivity extends AppCompatActivity {
                 mVideoView = new VideoView(this);
                 mVideoView.setVideoPath(mPlay);
                 mVideoView.setMediaController(new MediaController(this));
+                mVideoView.setVideoURI(uri);
                 mVideoView.start();
+                mVideoView.requestFocus();
                 setContentView(mVideoView);
 
             }
